@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8D1D7D321F432F9F00D629BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1D7D231F432F9F00D629BC /* AppDelegate.swift */; };
-		8D1D7D331F432F9F00D629BC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D1D7D281F432F9F00D629BC /* Info.plist */; };
 		8D1D7D341F432F9F00D629BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D1D7D2B1F432F9F00D629BC /* Assets.xcassets */; };
 		8D1D7D351F432F9F00D629BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D1D7D2C1F432F9F00D629BC /* LaunchScreen.storyboard */; };
 		8D1D7D3D1F4332AB00D629BC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1D7D3B1F4332AB00D629BC /* MainViewController.swift */; };
@@ -22,6 +21,10 @@
 		8D1D7D511F4336A900D629BC /* DefineConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1D7D4D1F4336A900D629BC /* DefineConstant.swift */; };
 		8D1D7D521F4336A900D629BC /* DefineString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1D7D4E1F4336A900D629BC /* DefineString.swift */; };
 		8D1D7D531F4336A900D629BC /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1D7D4F1F4336A900D629BC /* DeviceType.swift */; };
+		8D1D7D571F4341CC00D629BC /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1D7D561F4341CC00D629BC /* MainViewModel.swift */; };
+		8D1D7D5A1F43451B00D629BC /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1D7D581F43451A00D629BC /* MainCell.swift */; };
+		8D1D7D5B1F43451B00D629BC /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D1D7D591F43451A00D629BC /* MainCell.xib */; };
+		8D1D7D5D1F4345E400D629BC /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1D7D5C1F4345E400D629BC /* UITableViewCellExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,10 @@
 		8D1D7D4D1F4336A900D629BC /* DefineConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefineConstant.swift; sourceTree = "<group>"; };
 		8D1D7D4E1F4336A900D629BC /* DefineString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefineString.swift; sourceTree = "<group>"; };
 		8D1D7D4F1F4336A900D629BC /* DeviceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
+		8D1D7D561F4341CC00D629BC /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		8D1D7D581F43451A00D629BC /* MainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		8D1D7D591F43451A00D629BC /* MainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCell.xib; sourceTree = "<group>"; };
+		8D1D7D5C1F4345E400D629BC /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1D7D3F1F4333A800D629BC /* NSObjectExtension.swift */,
+				8D1D7D5C1F4345E400D629BC /* UITableViewCellExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -151,6 +159,8 @@
 		8D1D7D301F432F9F00D629BC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8D1D7D581F43451A00D629BC /* MainCell.swift */,
+				8D1D7D591F43451A00D629BC /* MainCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -158,6 +168,7 @@
 		8D1D7D311F432F9F00D629BC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8D1D7D561F4341CC00D629BC /* MainViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -282,7 +293,7 @@
 			files = (
 				8D1D7D351F432F9F00D629BC /* LaunchScreen.storyboard in Resources */,
 				8D1D7D341F432F9F00D629BC /* Assets.xcassets in Resources */,
-				8D1D7D331F432F9F00D629BC /* Info.plist in Resources */,
+				8D1D7D5B1F43451B00D629BC /* MainCell.xib in Resources */,
 				8D1D7D3E1F4332AB00D629BC /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,12 +310,15 @@
 				8D1D7D511F4336A900D629BC /* DefineConstant.swift in Sources */,
 				8D1D7D421F43340500D629BC /* BaseNavigationController.swift in Sources */,
 				8D1D7D4B1F43356300D629BC /* AppFont.swift in Sources */,
+				8D1D7D5A1F43451B00D629BC /* MainCell.swift in Sources */,
 				8D1D7D321F432F9F00D629BC /* AppDelegate.swift in Sources */,
 				8D1D7D401F4333A800D629BC /* NSObjectExtension.swift in Sources */,
 				8D1D7D3D1F4332AB00D629BC /* MainViewController.swift in Sources */,
 				8D1D7D531F4336A900D629BC /* DeviceType.swift in Sources */,
 				8D1D7D501F4336A900D629BC /* AppDefine.swift in Sources */,
+				8D1D7D5D1F4345E400D629BC /* UITableViewCellExtension.swift in Sources */,
 				8D1D7D4A1F43356300D629BC /* AppColor.swift in Sources */,
+				8D1D7D571F4341CC00D629BC /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

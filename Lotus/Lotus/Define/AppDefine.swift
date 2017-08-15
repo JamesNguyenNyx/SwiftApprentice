@@ -43,20 +43,5 @@ enum AuthenKey: String {
 }
 
 class AppUserDefaults {
-    class var authentication: Authentication {
-        set (newValue) {
-            let data = NSKeyedArchiver.archivedData(withRootObject: newValue)
-            kUserDefault.setValue(data, forKey: kAuthentication)
-            kUserDefault.synchronize()
-        }
-        
-        get {
-            if let authenData = kUserDefault.object(forKey: kAuthentication) as? Data {
-                if let authentication = NSKeyedUnarchiver.unarchiveObject(with: authenData) as? Authentication {
-                    return authentication
-                }
-            }
-            return Authentication()
-        }
-    }
+
 }
