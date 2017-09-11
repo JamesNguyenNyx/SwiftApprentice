@@ -12,10 +12,20 @@ class BaseNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isTranslucent = true
+        self.configureNavigation()
     }
     
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return topViewController!.supportedInterfaceOrientations
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    func configureNavigation() {
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.navigationBar.isTranslucent = true
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor.white
+        self.navigationController?.navigationBar.tintColor = UIColor.blue
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: AppColor.mainGreen]
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Hiragino Sans W3", size: 17.0)!]
     }
 }
